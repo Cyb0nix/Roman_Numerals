@@ -15,10 +15,23 @@ public class RomainConverter {
             if(number == 5){
                 return "V";
             }
-            if(number == 6){
-                return "VI";
+            if(number > 5 && number < 9){
+                return convertFiveToNine(number);
             }
-        }
+            if(number == 9){
+                return "IX";
+            }
+            if(number == 10){
+                return "X";
+            }
+            if(number > 10 && number < 40){
+                return "X" + convertToRomanNumber(number - 10);
+            }
+            if(number == 40){
+                return "XL";
+            }
+            
+        } 
 
         
 
@@ -28,6 +41,14 @@ public class RomainConverter {
     public String convertOneToFour(int number){
         String result = "";
         for(int i = 0; i < number; i++){
+            result += "I";
+        }
+        return result;
+    }
+
+    public String convertFiveToNine(int number){
+        String result = "V";
+        for(int i = 5; i < number; i++){
             result += "I";
         }
         return result;
