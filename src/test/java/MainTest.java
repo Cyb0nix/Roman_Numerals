@@ -135,4 +135,45 @@ public class MainTest {
         Assertions.assertEquals("XCIX", value);
     }
 
+    @Test
+    public void RomainConverter100(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(100);
+
+        Assertions.assertEquals("C", value);
+    }
+
+    @Test
+    public void RomainConverter119(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(119);
+
+        Assertions.assertEquals("CXIX", value);
+    }
+
+    @Test
+    public void RomainConverter270(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(200);
+
+        Assertions.assertEquals("CC", value);
+    }
+
+    @Test
+    public void RomainConverter400(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(400);
+
+        Assertions.assertEquals("CD", value);
+    }
+
+    @Test
+    public void RomainConverter500(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(500);
+
+        Assertions.assertEquals("D", value);
+    }
+
+
 }

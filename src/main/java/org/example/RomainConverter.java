@@ -48,6 +48,18 @@ public class RomainConverter {
             if(number == 100){
                 return "C";
             }
+            if(number > 100 && number < 400){
+                return "C" + convertToRomanNumber(number - 100);
+            }
+            if(number == 400){
+                return "CD";
+            }
+            if(number > 400 && number < 500){
+                return "CD" + convertToRomanNumber(number - 400);
+            }
+            if(number == 500){
+                return "D";
+            }
         } 
 
 
