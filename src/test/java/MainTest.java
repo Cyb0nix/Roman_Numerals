@@ -130,7 +130,7 @@ public class MainTest {
     @Test
     public void RomainConverter99(){
         RomainConverter convertTest = new RomainConverter();
-        String value = convertTest.convertToRomanNumber(90);
+        String value = convertTest.convertToRomanNumber(99);
 
         Assertions.assertEquals("XCIX", value);
     }

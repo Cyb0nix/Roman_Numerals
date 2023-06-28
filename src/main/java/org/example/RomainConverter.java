@@ -42,8 +42,12 @@ public class RomainConverter {
             if(number == 90){
                 return "XC";
             }
-            
-            
+            if(number > 90 && number < 100){
+                return "XC" + convertToRomanNumber(number - 90);
+            }
+            if(number == 100){
+                return "C";
+            }
         } 
 
 
