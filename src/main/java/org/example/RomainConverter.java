@@ -4,7 +4,7 @@ public class RomainConverter {
     public String convertToRomanNumber(int number){
 
         if(number < 1){
-            return "Invalid number";
+            throw new IllegalArgumentException("Number too small");
         }else{
             if(number < 4){
                 return convertOneToFour(number);
@@ -60,9 +60,25 @@ public class RomainConverter {
             if(number == 500){
                 return "D";
             }
+            if(number > 500 && number < 900){
+                return "D" + convertToRomanNumber(number - 500);
+            }
+            if(number == 900){
+                return "CM";
+            }
+            if(number > 900 && number < 1000){
+                return "CM" + convertToRomanNumber(number - 900);
+            }
+            if(number == 1000){
+                return "M";
+            }
+            if(number > 1000 && number < 3000){
+                return "M" + convertToRomanNumber(number - 1000);
+            }
+            if(number > 3000){
+                throw new IllegalArgumentException("Number too big");
+            }
         } 
-
-
         return null;
     }
 

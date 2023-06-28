@@ -1,3 +1,6 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.example.RomainConverter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -174,6 +177,48 @@ public class MainTest {
 
         Assertions.assertEquals("D", value);
     }
+
+    @Test
+    public void RomainConverter987(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(987);
+
+        Assertions.assertEquals("CMLXXXVII", value);
+    }
+
+    @Test
+    public void RomainConverter1259(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(1259);
+
+        Assertions.assertEquals("MCCLIX", value);
+    }
+
+    @Test
+    public void RomainConverter2999(){
+        RomainConverter convertTest = new RomainConverter();
+        String value = convertTest.convertToRomanNumber(2999);
+
+        Assertions.assertEquals("MMCMXCIX", value);
+    }
+
+    @Test
+    public void RomainConverter3100(){
+        RomainConverter convertTest = new RomainConverter();
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.convertToRomanNumber(3100));
+        assertEquals("Number too big", exception.getMessage());
+        
+    }
+
+    @Test
+    public void RomainConverter0(){
+        RomainConverter convertTest = new RomainConverter();
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.convertToRomanNumber(0));
+        assertEquals("Number too small", exception.getMessage());
+        
+    }
+
+
 
 
 }
