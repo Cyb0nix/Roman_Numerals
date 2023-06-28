@@ -30,10 +30,22 @@ public class RomainConverter {
             if(number == 40){
                 return "XL";
             }
+            if(number > 40 && number < 50){
+                return "XL" + convertToRomanNumber(number - 40);
+            }
+            if(number == 50){
+                return "L";
+            }
+            if(number > 50 && number < 90){
+                return "L" + convertToRomanNumber(number - 50);
+            }
+            if(number == 90){
+                return "XC";
+            }
+            
             
         } 
 
-        
 
         return null;
     }
