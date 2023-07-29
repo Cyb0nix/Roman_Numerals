@@ -418,7 +418,8 @@ public class MainTest {
     @Test
     public void RomainConverterMMMCMXCIX() {
         RomainConverter convertTest = new RomainConverter();
-        Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.toArabicNumerals("MMMCMXCIX"));
+        Throwable exception = assertThrows(IllegalArgumentException.class,
+                () -> convertTest.toArabicNumerals("MMMCMXCIX"));
         assertEquals("Number too big", exception.getMessage());
     }
 
@@ -428,8 +429,6 @@ public class MainTest {
         Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.toArabicNumerals("F"));
         assertEquals("Invalide Number", exception.getMessage());
 
-
-        
     }
 
 }
