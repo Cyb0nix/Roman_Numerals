@@ -215,4 +215,221 @@ public class MainTest {
 
     }
 
+    @Test
+    public void RomainConverterNegative() {
+        RomainConverter convertTest = new RomainConverter();
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.toRomanNumerals(-1));
+        assertEquals("Number too small", exception.getMessage());
+
+    }
+
+    @Test
+    public void RomainConverterI() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("I");
+
+        Assertions.assertEquals(1, value);
+    }
+
+    @Test
+    public void RomainConverterII() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("II");
+
+        Assertions.assertEquals(2, value);
+    }
+
+    @Test
+    public void RomainConverterIII() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("III");
+
+        Assertions.assertEquals(3, value);
+    }
+
+    @Test
+    public void RomainConverterIV() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("IV");
+
+        Assertions.assertEquals(4, value);
+    }
+
+    @Test
+    public void RomainConverterV() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("V");
+
+        Assertions.assertEquals(5, value);
+    }
+
+    @Test
+    public void RomainConverterVI() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("VI");
+
+        Assertions.assertEquals(6, value);
+    }
+
+    @Test
+    public void RomainConverterIX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("IX");
+
+        Assertions.assertEquals(9, value);
+    }
+
+    @Test
+    public void RomainConverterX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("X");
+
+        Assertions.assertEquals(10, value);
+    }
+
+    @Test
+    public void RomainConverterXI() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XI");
+
+        Assertions.assertEquals(11, value);
+    }
+
+    @Test
+    public void RomainConverterXIV() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XIV");
+
+        Assertions.assertEquals(14, value);
+    }
+
+    @Test
+    public void RomainConverterXV() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XV");
+
+        Assertions.assertEquals(15, value);
+    }
+
+    @Test
+    public void RomainConverterXIX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XIX");
+
+        Assertions.assertEquals(19, value);
+    }
+
+    @Test
+    public void RomainConverterXXXIX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XXXIX");
+
+        Assertions.assertEquals(39, value);
+    }
+
+    @Test
+    public void RomainConverterXL() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XL");
+
+        Assertions.assertEquals(40, value);
+    }
+
+    @Test
+    public void RomainConverterL() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("L");
+
+        Assertions.assertEquals(50, value);
+    }
+
+    @Test
+    public void RomainConverterLXIX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("LXIX");
+
+        Assertions.assertEquals(69, value);
+    }
+
+    @Test
+    public void RomainConverterXC() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("XC");
+
+        Assertions.assertEquals(90, value);
+    }
+
+    @Test
+    public void RomainConverterC() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("C");
+
+        Assertions.assertEquals(100, value);
+    }
+
+    @Test
+    public void RomainConverterCCXCIX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("CCXCIX");
+
+        Assertions.assertEquals(299, value);
+    }
+
+    @Test
+    public void RomainConverterCD() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("CD");
+
+        Assertions.assertEquals(400, value);
+    }
+
+    @Test
+    public void RomainConverterD() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("D");
+
+        Assertions.assertEquals(500, value);
+    }
+
+    @Test
+    public void RomainConverterCM() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("CM");
+
+        Assertions.assertEquals(900, value);
+    }
+
+    @Test
+    public void RomainConverterM() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("M");
+
+        Assertions.assertEquals(1000, value);
+    }
+
+    @Test
+    public void RomainConverterMMCDXCIX() {
+        RomainConverter convertTest = new RomainConverter();
+        int value = convertTest.toArabicNumerals("MMCDXCIX");
+
+        Assertions.assertEquals(2499, value);
+    }
+
+    @Test
+    public void RomainConverterMMMCMXCIX() {
+        RomainConverter convertTest = new RomainConverter();
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.toArabicNumerals("MMMCMXCIX"));
+        assertEquals("Number too big", exception.getMessage());
+    }
+
+    @Test
+    public void RomainConverterF() {
+        RomainConverter convertTest = new RomainConverter();
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> convertTest.toArabicNumerals("F"));
+        assertEquals("Invalide Number", exception.getMessage());
+
+
+        
+    }
+
 }
