@@ -5,7 +5,7 @@ import org.example.RomainConverter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class MainTest {
+public class RomainConverterTest {
 
     @Test
     public void RomainConverter() {
