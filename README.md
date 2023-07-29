@@ -15,8 +15,6 @@ int arabicNumber = converter.toArabicNumerals("LXIX");
 // print result
 System.out.println("LXIX -> " + arabicNumber);
 
-
-
 // convert to Arabic Numerals
 String romanNumber = converter.toRomanNumerals(69);
 
