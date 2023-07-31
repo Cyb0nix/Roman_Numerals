@@ -12,14 +12,11 @@ public class Main {
         // print result
         System.out.println("LXIX -> " + arabicNumber);
 
-
-
         // convert to Arabic Numerals
         String romanNumber = converter.toRomanNumerals(69);
 
         // print result
         System.out.println("69 -> " + romanNumber);
-
 
     }
 }

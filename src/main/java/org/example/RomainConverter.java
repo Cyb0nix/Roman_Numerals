@@ -11,12 +11,12 @@ public class RomainConverter {
             throw new IllegalArgumentException("Number too small");
         } else if (number > 3000) {
             throw new IllegalArgumentException("Number too big");
-        } else {
-            StringBuilder romainNumber = new StringBuilder();
-            convertToRoman(number, romainNumber);
-            return romainNumber.toString();
-
         }
+
+        StringBuilder romainNumber = new StringBuilder();
+        convertToRoman(number, romainNumber);
+        return romainNumber.toString();
+
     }
 
     private void convertToRoman(int number, StringBuilder romainNumber) {
@@ -35,15 +35,15 @@ public class RomainConverter {
 
     }
 
-    public int toArabicNumerals(String number){
+    public int toArabicNumerals(String number) {
 
-        String[] number_split = number.split("");
+        String[] numberSplit = number.split("");
 
         int arabicNumber = 0;
         int previous = 0;
 
-        for (int i = number_split.length - 1; i >= 0; i--) {
-            int current = convertToArabic(number_split[i]);
+        for (int i = numberSplit.length - 1; i >= 0; i--) {
+            int current = convertToArabic(numberSplit[i]);
             if (current < previous) {
                 arabicNumber -= current;
             } else {
@@ -56,9 +56,7 @@ public class RomainConverter {
             }
         }
         return arabicNumber;
-        
 
-       
     }
 
     private int convertToArabic(String number) {
@@ -83,6 +81,4 @@ public class RomainConverter {
         }
     }
 
-
-   
 }
